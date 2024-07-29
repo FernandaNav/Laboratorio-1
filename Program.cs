@@ -17,8 +17,16 @@ do
         switch (opcion)
         {
             case 1:
+                Console.Clear();
+                Console.WriteLine("___________");
+                Console.WriteLine("OPCION 1");
+                Console.WriteLine("___________");
                 break;
             case 2:
+                Console.Clear();
+                Console.WriteLine("___________");
+                Console.WriteLine("OPCION 2");
+                Console.WriteLine("___________");
                 break;
             case 3:
                 Console.Clear();
@@ -29,10 +37,16 @@ do
     catch (FormatException)
     {
         MensajeDeError();
+        MensajeParaContinuar();
     }
 } while (opcion != 3);
 
-
+static void MensajeParaContinuar()
+{
+    Console.WriteLine("");
+    Console.WriteLine("Presiona cualquier tecla para continuar...");
+    Console.ReadKey();
+}
 static void MensajeDeError()
 {
     Console.WriteLine("Error de Formato");
