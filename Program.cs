@@ -1,4 +1,6 @@
-﻿int opcion=0;
+﻿using System.ComponentModel.DataAnnotations;
+
+int opcion=0;
 string productos;
 
 do
@@ -55,26 +57,95 @@ static void MensajeDeError()
 }
 static void IngresarProductos()
 {
-    do
-    {
+    bool valido = false;
+    int contadorProductos = 0;
         Console.WriteLine("");
         Console.Write("Ingresa el nombre del primer producto: ");
         string producto1 = Console.ReadLine();
+    do
+    {
         Console.Write("Ingresa el precio del primer producto: Q");
         try
         {
             double precioProducto1 = Convert.ToDouble(Console.ReadLine());
-            if (precioProducto1 == 0)
+            if (precioProducto1 <= 0)
             {
                 Console.WriteLine("El precio no puede ser 0, intenta de nuevo");
                 Console.WriteLine();
             }
+            else
+            {
+                valido = true;
+            }
         }
         catch (FormatException)
         {
-            Console.Write("Ingresa el segundo producto: ");
+            MensajeDeError();
         }
-    } while (true);
+        Console.Write("Ingresa la cantidad: ");
+        try
+        {
+            int cantidad1 = Convert.ToInt32(Console.ReadLine());
+            if (cantidad1 <= 0)
+            {
+                Console.WriteLine("La cantidad no puede ser cero.");
+                Console.WriteLine();
+            }
+            else
+            {
+                valido = true;
+            }
+        }
+        catch (FormatException)
+        {
+            MensajeDeError();
+        }
+    } while (valido=false);
+
+
+    Console.WriteLine("");
+    Console.Write("Ingresa el nombre del segundo producto: ");
+    string producto2 = Console.ReadLine();
+    do
+    {
+        Console.Write("Ingresa el precio del segundo producto: Q");
+        try
+        {
+            double precioProducto2 = Convert.ToDouble(Console.ReadLine());
+            if (precioProducto2 <= 0)
+            {
+                Console.WriteLine("El precio no puede ser 0, intenta de nuevo");
+                Console.WriteLine();
+            }
+            else
+            {
+                valido = true;
+            }
+        }
+        catch (FormatException)
+        {
+            MensajeDeError();
+        }
+        Console.Write("Ingresa la cantidad: ");
+        try
+        {
+            int cantidad = Convert.ToInt32(Console.ReadLine());
+            if (cantidad <= 0)
+            {
+                Console.WriteLine("La cantidad no puede ser cero.");
+                Console.WriteLine();
+            }
+            else
+            {
+                valido = true;
+            }
+        }
+        catch (FormatException)
+        {
+            MensajeDeError();
+        }
+    } while (valido = false);
+    MensajeParaContinuar();
 }
 
 
