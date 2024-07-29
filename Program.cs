@@ -1,10 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-int opcion=0;
-string productos;
+int opcion = 0;
 
 do
 {
+    Console.Clear();
     Console.WriteLine("___________");
     Console.WriteLine("BIENVENIDO");
     Console.WriteLine("___________");
@@ -146,6 +146,18 @@ static void IngresarProductos()
         }
     } while (valido = false);
     MensajeParaContinuar();
+}
+
+static void MostrarProductosDisponibles()
+{
+    Console.WriteLine();
+    Console.WriteLine("Productos Disponibles:");
+    if(cantidad1)
+    Console.WriteLine("")
+}
+static void Comprar()
+{
+    
 }
 
 
