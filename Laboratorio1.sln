@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio1", "Laboratorio1.csproj", "{F89352D9-5171-49F5-8650-F698F1AE684A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Laboratorio1", "Laboratorio1.csproj", "{F89352D9-5171-49F5-8650-F698F1AE684A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EJ2TIENDA", "..\EJ2TIENDA\EJ2TIENDA.csproj", "{160887A0-4C09-4E0F-AA49-90EAFF204CC3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F89352D9-5171-49F5-8650-F698F1AE684A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F89352D9-5171-49F5-8650-F698F1AE684A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F89352D9-5171-49F5-8650-F698F1AE684A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{160887A0-4C09-4E0F-AA49-90EAFF204CC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{160887A0-4C09-4E0F-AA49-90EAFF204CC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{160887A0-4C09-4E0F-AA49-90EAFF204CC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{160887A0-4C09-4E0F-AA49-90EAFF204CC3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
