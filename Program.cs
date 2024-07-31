@@ -13,7 +13,7 @@ do
     Console.WriteLine("Bienvenido a la papelería CHUCHITO...");
     Console.WriteLine("¿Qué deseas realizar?");
     Console.WriteLine("Opción 1: Agregar producto.");
-    Console.WriteLine("Opción 3: Salir.");
+    Console.WriteLine("Opción 2: Salir.");
 
     try
     {
@@ -29,7 +29,6 @@ do
                 precioProducto1 = IngresarPrecio1();
                 IngresarProducto2();
                 precioProducto2 = IngresarPrecio2();
-                PrecioTotal(precioProducto1,precioProducto2);
                 Console.Write("El total de tu compra es de: Q"+ PrecioTotal(precioProducto1, precioProducto2));
                 MensajeParaContinuar();
                
@@ -49,7 +48,7 @@ do
         MensajeDeError();
         MensajeParaContinuar();
     }
-} while (opcion != 3);
+} while (opcion != 2);
 
 static void MensajeParaContinuar()
 {
@@ -139,6 +138,11 @@ static double PrecioTotal(double precioProducto2, double precioProducto1)
 {
     double total;
     total = precioProducto1 + precioProducto2;
+    if(total > 20)
+    {
+        Console.WriteLine("Has comprado un total de más de Q20.00, te haremos un descuento del 15%");
+        total = total - (total * 0.15);
+    }
     return total;
 }
 
