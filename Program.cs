@@ -2,6 +2,7 @@
 using System.ComponentModel.DataAnnotations;
 
 int opcion = 0;
+double precioProducto1, precioProducto2;
 
 do
 {
@@ -25,8 +26,13 @@ do
                 Console.WriteLine("OPCION 1");
                 Console.WriteLine("___________");
                 IngresarProducto1();
-                IngresarPrecio1();
+                precioProducto1 = IngresarPrecio1();
+                IngresarProducto2();
+                precioProducto2 = IngresarPrecio2();
+                PrecioTotal(precioProducto1,precioProducto2);
+                Console.Write("El total de tu compra es de: Q"+ PrecioTotal(precioProducto1, precioProducto2));
                 MensajeParaContinuar();
+               
                 break;
             case 2:
                 Console.Clear();
@@ -55,10 +61,7 @@ static void MensajeDeError()
 {
     Console.WriteLine("Error de Formato");
 }
-static void IngresarProductos()
-{
 
-}
 
 static string IngresarProducto1()
 {
@@ -97,7 +100,8 @@ static double IngresarPrecio1()
 
 static string IngresarProducto2()
 {
-    Console.Write("Ingresa el nombre del primer producto: ");
+    Console.WriteLine();
+    Console.Write("Ingresa el nombre del segundo producto: ");
     string nombreProducto2 = Console.ReadLine();
     return nombreProducto2;
 }
@@ -109,7 +113,7 @@ static double IngresarPrecio2()
     do
     {
         Console.WriteLine();
-        Console.Write("Ingresa el precio del primer producto: Q");
+        Console.Write("Ingresa el precio del segundo producto: Q");
         try
         {
             precioProducto2 = Convert.ToDouble(Console.ReadLine());
@@ -134,7 +138,7 @@ static double IngresarPrecio2()
 static double PrecioTotal(double precioProducto2, double precioProducto1)
 {
     double total;
-    total  
+    total = precioProducto1 + precioProducto2;
     return total;
 }
 
