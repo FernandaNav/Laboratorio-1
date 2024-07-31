@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 int opcion = 0;
 
@@ -11,7 +12,6 @@ do
     Console.WriteLine("Bienvenido a la papelería CHUCHITO...");
     Console.WriteLine("¿Qué deseas realizar?");
     Console.WriteLine("Opción 1: Agregar producto.");
-    Console.WriteLine("Opción 2: Comprar productos.");
     Console.WriteLine("Opción 3: Salir.");
 
     try
@@ -28,13 +28,11 @@ do
                 break;
             case 2:
                 Console.Clear();
-                Console.WriteLine("___________");
-                Console.WriteLine("OPCION 2");
-                Console.WriteLine("___________");
-                break;
-            case 3:
-                Console.Clear();
                 Console.WriteLine("Ten un buen día");
+                break;
+            default:
+                Console.WriteLine("Esta opcion no existe. "); Console.WriteLine("");
+                MensajeParaContinuar();
                 break;
         }
     }
@@ -55,112 +53,39 @@ static void MensajeDeError()
 {
     Console.WriteLine("Error de Formato");
 }
-static void IngresarProducto1()
+static void IngresarProductos()
 {
-    bool validar = false;
-    Console.WriteLine("Cuántos ")
 
-    /*bool valido = false;
-    int contadorProductos = 0;
-        Console.WriteLine("");
-        Console.Write("Ingresa el nombre del primer producto: ");
-        string producto1 = Console.ReadLine();
-    do
-    {
-        Console.Write("Ingresa el precio del primer producto: Q");
-        try
-        {
-            double precioProducto1 = Convert.ToDouble(Console.ReadLine());
-            if (precioProducto1 <= 0)
-            {
-                Console.WriteLine("El precio no puede ser 0, intenta de nuevo");
-                Console.WriteLine();
-            }
-            else
-            {
-                valido = true;
-            }
-        }
-        catch (FormatException)
-        {
-            MensajeDeError();
-        }
-        Console.Write("Ingresa la cantidad: ");
-        try
-        {
-            int cantidad1 = Convert.ToInt32(Console.ReadLine());
-            if (cantidad1 <= 0)
-            {
-                Console.WriteLine("La cantidad no puede ser cero.");
-                Console.WriteLine();
-            }
-            else
-            {
-                valido = true;
-            }
-        }
-        catch (FormatException)
-        {
-            MensajeDeError();
-        }
-} while (valido=false);
-
-
-    Console.WriteLine("");
-    Console.Write("Ingresa el nombre del segundo producto: ");
-    producto2 = Console.ReadLine();
-    do
-    {
-        Console.Write("Ingresa el precio del segundo producto: Q");
-        try
-        {
-            double precioProducto2 = Convert.ToDouble(Console.ReadLine());
-            if (precioProducto2 <= 0)
-            {
-                Console.WriteLine("El precio no puede ser 0, intenta de nuevo");
-                Console.WriteLine();
-            }
-            else
-            {
-                valido = true;
-            }
-        }
-        catch (FormatException)
-        {
-            MensajeDeError();
-        }
-        Console.Write("Ingresa la cantidad: ");
-        try
-        {
-            int cantidad = Convert.ToInt32(Console.ReadLine());
-            if (cantidad <= 0)
-            {
-                Console.WriteLine("La cantidad no puede ser cero.");
-                Console.WriteLine();
-            }
-            else
-            {
-                valido = true;
-            }
-        }
-        catch (FormatException)
-        {
-            MensajeDeError();
-        }
-    } while (valido = false);
-    MensajeParaContinuar();
-}*/
-
-    static void MostrarProductosDisponibles()
-{
-    Console.WriteLine();
-    Console.WriteLine("Productos Disponibles:");
-    if (cantidad1)
-        Console.WriteLine("");
 }
-static void Comprar()
+
+static string IngresarProducto1()
 {
-    
+    Console.WriteLine("Ingresa el nombre del primer producto: ");
+    string nombre = Console.ReadLine();
+    return nombre;
+}
+
+static double IngresarPrecio1()
+{
+    bool validarFormato = false;
+    double precio1;
+    do
+    {
+        Console.WriteLine();
+        Console.WriteLine("Ingresa el precio del primer producto: ");
+        try
+        {
+            precio1 = Convert.ToDouble(Console.ReadLine());
+            if(precio1 <= 0)
+            {
+
+            }
+        }catch(FormatException)
+        {
+            MensajeDeError();
+        }
+        return precio1;
+    } while (validarFormato==false);
 }
 
 
