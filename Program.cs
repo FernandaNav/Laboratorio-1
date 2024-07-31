@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
 
 int opcion = 0;
 
@@ -55,9 +55,12 @@ static void MensajeDeError()
 {
     Console.WriteLine("Error de Formato");
 }
-static void IngresarProductos()
+static void IngresarProducto1()
 {
-    bool valido = false;
+    bool validar = false;
+    Console.WriteLine("Cuántos ")
+
+    /*bool valido = false;
     int contadorProductos = 0;
         Console.WriteLine("");
         Console.Write("Ingresa el nombre del primer producto: ");
@@ -100,12 +103,12 @@ static void IngresarProductos()
         {
             MensajeDeError();
         }
-    } while (valido=false);
+} while (valido=false);
 
 
     Console.WriteLine("");
     Console.Write("Ingresa el nombre del segundo producto: ");
-    string producto2 = Console.ReadLine();
+    producto2 = Console.ReadLine();
     do
     {
         Console.Write("Ingresa el precio del segundo producto: Q");
@@ -146,14 +149,14 @@ static void IngresarProductos()
         }
     } while (valido = false);
     MensajeParaContinuar();
-}
+}*/
 
-static void MostrarProductosDisponibles()
+    static void MostrarProductosDisponibles()
 {
     Console.WriteLine();
     Console.WriteLine("Productos Disponibles:");
-    if(cantidad1)
-    Console.WriteLine("")
+    if (cantidad1)
+        Console.WriteLine("");
 }
 static void Comprar()
 {
