@@ -24,7 +24,9 @@ do
                 Console.WriteLine("___________");
                 Console.WriteLine("OPCION 1");
                 Console.WriteLine("___________");
-                IngresarProductos();
+                IngresarProducto1();
+                IngresarPrecio1();
+                MensajeParaContinuar();
                 break;
             case 2:
                 Console.Clear();
@@ -60,32 +62,80 @@ static void IngresarProductos()
 
 static string IngresarProducto1()
 {
-    Console.WriteLine("Ingresa el nombre del primer producto: ");
-    string nombre = Console.ReadLine();
-    return nombre;
+    Console.Write("Ingresa el nombre del primer producto: ");
+    string nombreProducto1 = Console.ReadLine();
+    return nombreProducto1;
 }
 
 static double IngresarPrecio1()
 {
     bool validarFormato = false;
-    double precio1;
+    double precioProducto1 = 0;
     do
     {
         Console.WriteLine();
-        Console.WriteLine("Ingresa el precio del primer producto: ");
+        Console.Write("Ingresa el precio del primer producto: Q");
         try
         {
-            precio1 = Convert.ToDouble(Console.ReadLine());
-            if(precio1 <= 0)
+            precioProducto1 = Convert.ToDouble(Console.ReadLine());
+            if(precioProducto1 <= 0)
             {
-
+                Console.WriteLine("El precio no puede ser igual ni menor a Q0.00. Intenta de nuevo.");
+                Console.WriteLine();
+            }
+            else
+            {
+                validarFormato = true;
             }
         }catch(FormatException)
         {
             MensajeDeError();
         }
-        return precio1;
     } while (validarFormato==false);
+    return precioProducto1;
+}
+
+static string IngresarProducto2()
+{
+    Console.Write("Ingresa el nombre del primer producto: ");
+    string nombreProducto2 = Console.ReadLine();
+    return nombreProducto2;
+}
+
+static double IngresarPrecio2()
+{
+    bool validarFormato = false;
+    double precioProducto2 = 0;
+    do
+    {
+        Console.WriteLine();
+        Console.Write("Ingresa el precio del primer producto: Q");
+        try
+        {
+            precioProducto2 = Convert.ToDouble(Console.ReadLine());
+            if (precioProducto2 <= 0)
+            {
+                Console.WriteLine("El precio no puede ser igual ni menor a Q0.00. Intenta de nuevo.");
+                Console.WriteLine();
+            }
+            else
+            {
+                validarFormato = true;
+            }
+        }
+        catch (FormatException)
+        {
+            MensajeDeError();
+        }
+    } while (validarFormato == false);
+    return precioProducto2;
+}
+
+static double PrecioTotal(double precioProducto2, double precioProducto1)
+{
+    double total;
+    total  
+    return total;
 }
 
 
